@@ -5,7 +5,7 @@ class ScannerException {
      prints the entry back out. */
   public static void main(String[] args) {
     Scanner input = new Scanner(System.in);
-    System.out.print("Please enter your age in years: "); 
+    System.out.print("Please enter your age in years!: "); 
     int age = 0;
     try {
       age = input.nextInt();
