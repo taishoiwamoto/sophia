@@ -26,7 +26,7 @@ public class DrinkOrder {
         drinkDetails += ", cold";
       }
       else {
-        System.out.println("Not a valid temperature selection.");
+        System.out.println("Not a valid temperature selection!");
       }
 
     }
