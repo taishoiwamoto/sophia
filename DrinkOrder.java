@@ -1,5 +1,3 @@
-Programming the Initial Check for Drink Types
-
 import java.util.Scanner;
 
 public class DrinkOrder {
@@ -16,6 +14,21 @@ public class DrinkOrder {
     input.nextLine();
     if(choice == 1) {
       drinkDetails = "Water";
+      System.out.println("Would you like that 1) hot or 2) cold?");
+      System.out.print("Enter temperature selection #: ");
+      choice = input.nextInt();
+      // Remove \n left in input to avoid problems with later inputs
+      input.nextLine();
+      if(choice == 1) {
+        drinkDetails += ", hot";
+      }
+      else if(choice == 2) {
+        drinkDetails += ", cold";
+      }
+      else {
+        System.out.println("Not a valid temperature selection.");
+      }
+
     }
     else if(choice == 2) {
       drinkDetails = "Coffee";
