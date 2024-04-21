@@ -1,45 +1,20 @@
-import java.util.Scanner;
+import java.util.Arrays;
 
-public class DrinkOrder {
+class ArraySort {
   public static void main(String[] args) {
-    Scanner input = new Scanner(System.in);
-    System.out.println("What type of drink would you like to order?");
-    // Note use of new line \n to print 3 lines with 1 statement.
-    System.out.println("1. Water\n2. Coffee\n3. Tea");
-    System.out.print("Drink selection #: ");
-    // String variable to hold drink details
-    String drinkDetails = "No drink chosen.";
-    int choice = input.nextInt();
-    // Remove \n left in input to avoid problems with later inputs
-    input.nextLine();
-    if(choice == 1) {
-      drinkDetails = "Water";
-      System.out.println("Would you like that 1) hot or 2) cold?");
-      System.out.print("Enter temperature selection #: ");
-      choice = input.nextInt();
-      // Remove \n left in input to avoid problems with later inputs
-      input.nextLine();
-      if(choice == 1) {
-        drinkDetails += ", hot";
-      }
-      else if(choice == 2) {
-        drinkDetails += ", cold";
-      }
-      else {
-        System.out.println("Not a valid temperature selection!");
-      }
-
-    }
-    else if(choice == 2) {
-      drinkDetails = "Coffee";
-    }
-    else if(choice == 3) {
-      drinkDetails = "Tea";
-    }
-    else {
-      System.out.println("Sorry, not a valid drink selection.");
-    }
-    // Print out final drink selection
-    System.out.println("Your drink selection: " + drinkDetails + ".");
+    // Declare and initialize array with values
+    int[] scores = {77, 89, 100, 68, 95};
+    //System.out.println("Incorrect way to print: " + scores);
+    System.out.println("Scores: " + Arrays.toString(scores));
+    Arrays.sort(scores);
+    System.out.println("Sorted Scores: " + Arrays.toString(scores));
+    // Use the length property (or attribute) to get size of array
+    int size = scores.length;
+    System.out.println("Array Size: " + size);
+    // Element 0 contains the lowest value
+    System.out.println("Lowest Score: " + scores[0]);
+    // Last index is 1 less than the size
+    int lastIndex = size - 1;
+    System.out.println("Highest Score: " + scores[lastIndex]);
   }
 }
